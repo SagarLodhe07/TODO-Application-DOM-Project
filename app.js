@@ -1,16 +1,18 @@
-//
-
+// Fetching All Todo Item From Local Storage
 const loadTodos = () => {
   const todos = JSON.parse(localStorage.getItem("todos")) || { todoList: [] };
   console.log(todos);
   return todos;
 };
 
+// Add Item(todos) in Local Storage
 const addToDotoLocalStorage = (todo_TEXT) => {
   const todos = loadTodos();
   todos.todoList.push(todo_TEXT);
   localStorage.setItem("todos", JSON.stringify(todos));
 };
+
+// Delete Item(todos) from Local Storage
 const removeTodoFromLocalStorage = (todo_TEXT) => {
   const todos = loadTodos();
   todos.todoList = todos.todoList.filter((todo) => todo !== todo_TEXT);
@@ -19,10 +21,12 @@ const removeTodoFromLocalStorage = (todo_TEXT) => {
 
 const addHTMLTag = (todo_TEXT) => {
   const taskList = document.getElementById("taskList");
+  // Creating List Tag
   const todo = document.createElement("li");
   todo.textContent = todo_TEXT;
   taskList.appendChild(todo);
-
+  
+  // Creating Delete Button
   const delete_Btn = document.createElement("button");
   delete_Btn.textContent = "Delete";
   delete_Btn.classList.add("delete_Btn");
