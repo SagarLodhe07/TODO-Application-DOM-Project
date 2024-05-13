@@ -1,7 +1,6 @@
 // Fetching All Todo Item From Local Storage
 const loadTodos = () => {
   const todos = JSON.parse(localStorage.getItem("todos")) || { todoList: [] };
-  console.log(todos);
   return todos;
 };
 

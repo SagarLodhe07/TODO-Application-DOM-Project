@@ -44,9 +44,9 @@ h1 {
     text-align: right;
     padding: 8px 10px;
     width: 60px;
-    margin-left: 550px;
     background-color: crimson;
     color: white;
+    margin-left: auto;
     border: none;
     border-radius: 5px;
 }
@@ -64,14 +64,17 @@ h1 {
 ul {
     list-style-type: none;
     padding: 0;
+    width: 600px;
 }
 
 li {
+    display: flex;
+    align-items: center;
     margin: 15px;
     padding: 5px 10px;
     border-bottom: 1px solid #b0adad;
     text-align: left;
-    width: 600px;
+    width: 100%;
     text-wrap: nowrap;
 }
 
